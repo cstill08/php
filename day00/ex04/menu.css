@@ -1,0 +1,60 @@
+html, body {
+    width: auto;
+    height: auto;
+    background-image: url(https://mebel-go.ru/mebelgoer/8763f3fb20078ad2167c5a17c0106ee31572.jpg);
+    background-size: 105%;
+}
+
+.menu {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu ul li {
+    padding: 20px;
+}
+/* тут скрываем элементы второго уровня, позиция абсолют чтобы не пропали элементы ппервого уровня при наведении на один из элементов*/
+.menu ul ul {
+    display: none;
+    position: absolute;
+    background-color: blue;
+    margin-top: 6%;
+    margin-left: -10%;
+}
+
+.menu ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.menu ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: teal;
+}
+.menu ul li, .menu ul {
+    display: inline-block;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu li:hover li {
+    display: block;
+}
+
+.menu ul > li:hover {
+    background-color: rgb(12, 209, 199);
+}
+
+.menu ul ul > li:hover {
+    background-color: rgb(51, 131, 223);
+}

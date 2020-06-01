@@ -1,0 +1,79 @@
+html, body {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    min-width: 10%;
+    min-height: 10%;
+}
+
+body { 
+    background-image: url(https://i.pinimg.com/originals/33/13/8c/33138c8c34ad927e28d53b73f3312dc6.jpg); 
+    background-size: 120%;
+}
+
+h1 { 
+    color: black;
+    text-align: center;
+    min-width: 10%;
+    min-height: 10%;
+    font-size: calc(3vw - 0.1rem);
+}
+
+table {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+td {
+    width: 5%;
+    height: auto;
+    margin: auto;
+}
+
+.element { 
+    text-align:center; 
+    font-weight:900; 
+    font-size: calc(2vw - 0.1rem);
+}
+p {
+    margin: auto;
+    font-size: calc(1vw - 0.1rem);
+}
+
+.massa { 
+    text-align: right;
+    font-weight:300;
+    font-size: calc(1vw - 0.1rem);
+}
+
+.number {
+    text-align: left;
+    font-weight:300;
+    font-size: calc(1vw - 0.1rem);
+}
+
+.s_elem {
+    background-color: #FF1493
+}
+
+.p_elem {
+    background-color: #FFFF00
+}
+
+.d_elem {
+    background-color: #00BFFF 
+}
+
+.f_elem {
+    background-color: #66CDAA 
+}
+
+.f2_elem {
+    background-color: #20B2AA
+}
+
+.f_elem {
+    margin-top: 1%;
+}
