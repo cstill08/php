@@ -13,7 +13,7 @@ html, body {
 .menu ul li {
     padding: 20px;
 }
-/* тут скрываем элементы второго уровня, позиция абсолют чтобы не пропали элементы ппервого уровня при наведении на один из элементов*/
+
 .menu ul ul {
     display: none;
     position: absolute;
@@ -39,6 +39,7 @@ html, body {
     padding: 0;
     background-color: teal;
 }
+
 .menu ul li, .menu ul {
     display: inline-block;
 }
