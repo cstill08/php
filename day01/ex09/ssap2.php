@@ -3,12 +3,12 @@
 function cmp($a, $b)
 {
 	$i = 0;
-	$line = "abcdefghijklmnopqrstuvwxyz0123456789!\"
+	$tmp = "abcdefghijklmnopqrstuvwxyz0123456789!\"
 			#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 	while (($i < strlen($a)) || ($i < strlen($b)))
 	{
-		$a_index = stripos($line, $a[$i]);
-		$b_index = stripos($line, $b[$i]);
+		$a_index = stripos($tmp, $a[$i]);
+		$b_index = stripos($tmp, $b[$i]);
 		if ($a_index > $b_index)
 			return (1);
 		else if ($a_index < $b_index)
@@ -17,18 +17,18 @@ function cmp($a, $b)
 			$i++;
 	}
 }
-$arg = 1;
-$arr = array();
+$aс = 1;
+$word = array();
 foreach ($argv as $elem)
 {
-	if ($arg++ > 1)
+	if ($aс++ > 1)
 	{
-		$temp = preg_split("/ +/", trim($elem));
-		if ($temp[0] != "")
-			$arr = array_merge($arr, $temp);
+		$line = preg_split("/ +/", trim($elem));
+		if ($line[0] != "")
+			$word = array_merge($word, $line);
 	}
 }
-usort($arr, "cmp");
-foreach ($arr as $elem)
+usort($word, "cmp");
+foreach ($word as $elem)
 	echo "$elem"."\n";
 ?>
