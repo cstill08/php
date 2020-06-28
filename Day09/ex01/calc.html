@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Calc</title>
+        <style>
+            body {
+                background-color: LightCyan;
+            }
+            h1{
+                text-align: center;
+            }
+            .top {
+                width: 100vw;
+                height: 100vh;
+            }
+            .calc {
+                background-color: HotPink;
+                margin: 10% 30% 30% 30%;
+                padding: 100px;
+            }
+        </style>
+        <script>
+            var right;
+            var left;
+            var operator;
+            var calc;
+
+            window.onload = function()
+            {
+                left = document.getElementById("left");
+                right = document.getElementById("right");
+                operator = document.getElementById("operator");
+                calc = document.getElementById("calc");
+                calc.addEventListener("submit", calculate);
+                setInterval("alert('Please, use me...')", 30000);
+            }
+            function checkNimber(le, ri)
+            {
+                if (le >= 0 && ri >= 0)	
+                    return true;
+                return false;
+            }
+            function calculate()
+            {
+                event.preventDefault();
+                var le = Number(left.value);
+                var ri = Number(right.value);
+                if (!checkNimber(le, ri))
+                {
+                    alert('Error :(');
+                    return ;
+                }
+                switch (operator.value)
+                {
+                    case ("plys"):
+                        result(le + ri);
+                        break;
+                    case ("minys"):
+                        result(le - ri);
+                        break;
+                    case ("ymnozh"):
+                        result(le * ri);
+                        break;
+                    case ("del"):
+                        if (ri === 0)
+                            result("It’s over 9000!");
+                        else
+                            result(le / ri);
+                        break;
+                    case ("mod"):
+                        if (ri === 0)
+                            result("It’s over 9000!");
+                        else
+                            result(le % ri);
+                        break;
+                    default:
+                        result("Error!");
+                        //break;
+                }
+            }
+            function result(res)
+            {
+                console.log(res);
+                alert(res);
+            }
+        </script>
+</head>
+<body>
+    <div class="top">
+        <div class="calc">
+            <h1>Calculator</h1>
+            <form action="" id="calc">
+                <input type="text" id="left">
+                <select id="operator">
+                    <option value="plys">+</option>
+                    <option value="minys">-</option>
+                    <option value="ymnozh">*</option>
+                    <option value="del">/</option>
+                    <option value="mod">%</option>
+                </select>
+                <input type="text" id="right">
+                <input type="submit" id="submit" value="Try me!">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

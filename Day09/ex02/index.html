@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <style>
+        body {
+            background-color: LightCyan;
+            background-size: 100%;
+            background-image: url(https://ic.pics.livejournal.com/anna_sitnikova/74470496/26741/26741_600.jpg);
+        }
+        h1 {
+            text-align: center;
+        }
+        .top{
+            width: 30vw;
+            text-align: center;
+            background-color: fuchsia;
+            margin: 10% 30% 30% 30%;
+            padding: 100px;
+            border: 1px solid Indigo;
+        }
+        .new {
+            display: block;
+            width: 100%;
+            height:60px;
+            background-color: Cyan;
+            border:1px solid Teal;
+            float: right;
+            font-size:30px;
+        }
+    </style>
+    <script src="todo.js"></script>
+</head>
+<body>
+    <div class="top">
+        <h1>FT LIST</h1>
+        <hr />
+        <div class="ft_list" id="ft_list">
+            <button class="new" id="new" name="new">New</button>
+            <div id="clear" style="clear: right;"></div>
+        </div>
+    </div>
+</body>
+</html>
